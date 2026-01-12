@@ -1,0 +1,19 @@
+# Development files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Original source files (keep organized)
+*.docx
+Imagemark_Main (1).png
+
+# Logs
+*.log
+
+# Cache
+.cache/

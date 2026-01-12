@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Interest - The Gateway Group</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="The Gateway Group">
+                    <span>The Gateway Group</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="who-can-join.html">Who Can Join</a></li>
+                    <li><a href="contact.html" class="btn-primary active">Express Interest</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Express Your Interest</h1>
+                <p>Take the first step towards joining our collaborative network</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2>What Do I Do If I Am Interested?</h2>
+                    <p>
+                        Use the form below to express your interest and someone will get back to you for a video call
+                        discussion about next steps. We look forward to exciting conversations with you, enabling us to
+                        work together to connect, collaborate and create brilliant opportunities for our educational
+                        settings and their communities.
+                    </p>
+
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="position">Position *</label>
+                                <input type="text" id="position" name="position" required placeholder="Headteacher">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john.smith@school.ac.uk">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="01234 567890">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="school">School/Educational Setting *</label>
+                                <input type="text" id="school" name="school" required placeholder="Example Primary School">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="setting-type">Type of Setting *</label>
+                                <select id="setting-type" name="setting-type" required>
+                                    <option value="">Please select...</option>
+                                    <option value="primary">Primary School</option>
+                                    <option value="secondary">Secondary School</option>
+                                    <option value="infant">Infant School</option>
+                                    <option value="junior">Junior School</option>
+                                    <option value="independent">Independent/Private School</option>
+                                    <option value="special">Special School</option>
+                                    <option value="sat">Single Academy Trust (SAT)</option>
+                                    <option value="nursery">Nursery</option>
+                                    <option value="ap">Alternative Provision (AP)</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pupil-numbers">Approximate Pupil Numbers</label>
+                                <input type="text" id="pupil-numbers" name="pupil-numbers" placeholder="e.g., 250">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location (Town/City) *</label>
+                                <input type="text" id="location" name="location" required placeholder="e.g., Brighton">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest-areas">Areas of Interest</label>
+                                <select id="interest-areas" name="interest-areas" multiple size="5">
+                                    <option value="finance">Finance Management</option>
+                                    <option value="hr">Human Resources</option>
+                                    <option value="it">IT & MIS</option>
+                                    <option value="site">Site & Premises Management</option>
+                                    <option value="health-safety">Health & Safety</option>
+                                    <option value="education">Educational Support</option>
+                                    <option value="leadership">Leadership Development</option>
+                                    <option value="collaboration">General Collaboration</option>
+                                </select>
+                                <small style="color: var(--color-gray); display: block; margin-top: 0.5rem;">
+                                    Hold Ctrl (Windows) or Cmd (Mac) to select multiple options
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Additional Information or Questions</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us more about your interest in joining The Gateway Group..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-contact">Preferred Contact Method *</label>
+                                <select id="preferred-contact" name="preferred-contact" required>
+                                    <option value="">Please select...</option>
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="video">Video Call</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-large btn-primary" style="width: 100%; margin-top: 1rem;">
+                                Submit Your Interest
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="highlight-box" style="margin-top: 3rem;">
+                        <h3>What Happens Next?</h3>
+                        <p>
+                            Once you submit this form, a member of our team will review your information and contact you
+                            to arrange a convenient time for a video call. During this discussion, we'll explore how
+                            The Gateway Group can support your educational setting's specific needs and answer any
+                            questions you may have about membership options and costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/whitrelogo.png" alt="The Gateway Group" class="footer-logo">
+                    <p>Part of The Gateway Trust</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="who-can-join.html">Who Can Join</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>Connect. Collaborate. Create.</p>
+                    <a href="contact.html" class="btn btn-small">Express Interest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Gateway Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
