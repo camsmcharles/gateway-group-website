@@ -42,10 +42,10 @@ document.querySelectorAll('.feature, .card').forEach(el => {
     observer.observe(el);
 });
 
-// Form Validation (for contact page)
+// Form Validation and Submission (for contact page with FormSpree)
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // Get form values
@@ -53,7 +53,10 @@ if (contactForm) {
         const data = Object.fromEntries(formData);
 
         // Basic validation
-        if (!data.name || !data.email || !data.message) {
+        const requiredFields = ['name', 'position', 'email', 'school', 'setting-type', 'location', 'preferred-contact'];
+        const missingFields = requiredFields.filter(field => !data[field]);
+
+        if (missingFields.length > 0) {
             alert('Please fill in all required fields.');
             return;
         }
@@ -65,9 +68,33 @@ if (contactForm) {
             return;
         }
 
-        // Success message
-        alert('Thank you for your interest! We will be in touch soon.');
-        contactForm.reset();
+        // Submit to FormSpree
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Thank you for your interest! We will be in touch soon.');
+                contactForm.reset();
+            } else {
+                alert('There was a problem submitting your form. Please try again or contact us directly.');
+            }
+        } catch (error) {
+            alert('There was a problem submitting your form. Please try again or contact us directly.');
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        }
     });
 }
 
